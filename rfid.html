@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="css/boot.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fonticon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/relatorio.css">
+    
+    <title>PROJETO HTML MOD 3</title>
+</head>
+<body>
+    <!-- DOBRA CABEÇALHO -->
+    <header class="main_header">
+        <div class="main_header_content">
+            <a href="#" class="logo">
+                <img src="img/LOGO3.png" alt="Bem vindo ao projeto de cadastro patrimonial da escola técnica de ceilandia"
+                    title="Bem vindo ao projeto de cadastro patrimonial da escola técnica de ceilandia"></a>
+
+            <nav class="main_header_content_menu">
+                <ul>
+                    <li><a href="view/index.html">Home</a></li>
+                    <li><a href="login.html" class="modal-link">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- FIM DOBRA CABEÇALHO -->
+    <h1>Inventàrio</h1>
+
+    <form id="reportOptions">
+        <label for="reportType">Setor:</label>
+        <select id="reportType">
+            <option value="relatorio1">Sala x</option>
+            <option value="relatorio1">Sala x</option>
+            <option value="relatorio1">Sala x</option>
+            <option value="relatorio1">Sala x</option>
+            <option value="relatorio1">Sala x</option>
+        </select>
+         <label for="comment">Tombo:</label>
+         <p>(obs: o tombamento pode ser feito manualmente, com a leitura da caneta optíca ou com os chips RFID)</p>
+         <br>
+        <textarea id="comment" placeholder="" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+        <label for="obs">Observação:</label>
+        <input type="text">
+        <button type="button" id="generateReport">Salvar</button>
+       
+    </form>
+
+    
+</body>
+</html>

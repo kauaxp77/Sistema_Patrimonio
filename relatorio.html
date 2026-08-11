@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="css/boot.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fonticon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/relatorio.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+	<link rel="stylesheet" href="css/estilocarrosel.css">
+    
+    <title>PROJETO HTLM MOD 3</title>
+</head>
+<body>
+    
+
+
+    <!--DOBRA CABEÇALHO-->
+
+    <header class="main_header">
+        <div class="main_header_content">
+            <a href="#" class="logo">
+                <img src="img/LOGO3.png" alt="Bem vindo ao projeto de cadastro patrimonial da escola tecica de ceilandia"
+                    title="Bem vindo ao projeto de cadastro patrimonial da escola tecica de ceilandia"></a>
+
+            <nav class="main_header_content_menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html" class="modal-link">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--FIM DOBRA CABEÇALHO-->
+    <h1>Gerador de Relatórios</h1>
+
+    <form id="reportOptions">
+        <label for="reportType">Tipo de Relatório:</label>
+        <select id="reportType">
+            <option value="relatorio1">Inventario</option>
+            <option value="relatorio2">Relatar defeito</option>
+            <option value="relatorio3"></option>
+        </select>
+
+        <label for="startDate">Data de Início:</label>
+        <input type="date" id="startDate">
+
+        <label for="endDate">Data de Término:</label>
+        <input type="date" id="endDate">
+
+        <label for="format">Formato do Relatório:</label>
+        <select id="format">
+            <option value="pdf">PDF</option>
+            <option value="excel">Excel</option>
+        </select>
+
+        <label for="comment">Comentários adicionais:</label>
+        <textarea id="comment" placeholder="" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+        <button type="button" id="generateReport">Gerar Relatório</button>
+    </form>
+
+    <script>
+        // Função para gerar o relatório com base nas opções selecionadas
+        document.getElementById("generateReport").addEventListener("click", function () {
+            const reportType = document.getElementById("reportType").value;
+            const startDate = document.getElementById("startDate").value;
+            const endDate = document.getElementById("endDate").value;
+            const format = document.getElementById("format").value;
+
+            // Aqui você pode inserir a lógica para gerar o relatório com base nas opções selecionadas
+            // Vou criar um exemplo simples apenas para ilustração:
+            const reportResult = `Relatório ${reportType} do período de ${startDate} a ${endDate} gerado no formato ${format}.`;
+
+            // Exibir o resultado na página
+            document.getElementById("reportResult").innerHTML = reportResult;
+        });
+    </script>
+</body>
+</html>

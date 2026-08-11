@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/recuperar.css">
+    <title>Recuperação de Conta</title>
+</head>
+<body>
+    <form action="" method="post">
+        <h1>Buscar por E-mail</h1>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <h1>Buscar por Matrícula do usuario</h1>
+        <label for="username">Matricula</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <br><br>
+        <!-- Botão de envio -->
+        <input type="submit" value="Recuperar acesso">
+    </form>
+
+    <script>
+        // Exibir ou ocultar campo de pergunta de segurança com base na seleção do método
+        document.getElementById("method").addEventListener("change", function() {
+            const selectedMethod = this.value;
+            const securityQuestionField = document.getElementById("security-question");
+            
+            if (selectedMethod === "pergunta") {
+                securityQuestionField.style.display = "block";
+            } else {
+                securityQuestionField.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

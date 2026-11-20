@@ -19,19 +19,5 @@
         <!-- Botão de envio -->
         <input type="submit" value="Recuperar acesso">
     </form>
-
-    <script>
-        // Exibir ou ocultar campo de pergunta de segurança com base na seleção do método
-        document.getElementById("method").addEventListener("change", function() {
-            const selectedMethod = this.value;
-            const securityQuestionField = document.getElementById("security-question");
-            
-            if (selectedMethod === "pergunta") {
-                securityQuestionField.style.display = "block";
-            } else {
-                securityQuestionField.style.display = "none";
-            }
-        });
-    </script>
 </body>
 </html>
